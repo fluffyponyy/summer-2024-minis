@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>chat</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class="chat-holder">
+      <div class="personHolder">
+        <div class="chatbox red" id="red">
+          Press "space" to begin to chat. <br /><br />
+        </div>
+        <div class="button-holder">
+          <div id="redButton" class="button invisible" onclick="redChosen()">
+            I'd never do that to you.
+          </div>
+        </div>
+      </div>
+      <div class="personHolder">
+        <div class="chatbox blue invisible" id="blue"></div>
+        <div class="button-holder">
+          <div id="blueButton" class="button invisible" onclick="blueChosen()">
+            no of course not!!!
+          </div>
+        </div>
+      </div>
+      <div class="personHolder">
+        <div class="chatbox purple invisible" id="purple"></div>
+        <div class="button-holder">
+          <div id="purpleButton" class="button invisible" onclick="purpleChosen()">No im not</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

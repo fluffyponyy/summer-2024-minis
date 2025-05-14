@@ -1,0 +1,75 @@
+.chat-holder {
+    font-family: "Inconsolata", monospace;
+    display: flex;
+}
+
+.personHolder{
+  width: 500px;
+}
+.chatbox{
+  height: 500px;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 15px;
+  overflow-y: scroll;
+}
+
+.button-holder {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button{
+  font-family: "Inconsolata", monospace;
+  color: white;
+  border-radius: 3px;
+  user-select: none;
+  padding: 7px;
+  
+  margin: 15px;
+}
+
+.button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#redButton {
+  background-color:#d98080;
+}
+
+#blueButton {
+  background-color:#7e8ef7;
+}
+
+#purpleButton {
+  background-color:#e853fc;
+}
+
+.red{
+  color:#b00000;
+}
+
+.blue{
+  color:#0725e6;
+}
+
+.purple{
+  color:#770087;
+}
+
+.line{
+  margin: 0px;
+}
+
+.invisible {
+  display: none;
+}
+
+.gone {
+  background-color: black;
+  color: black;
+  border: 1px black solid;
+  border-radius: 5px;
+}

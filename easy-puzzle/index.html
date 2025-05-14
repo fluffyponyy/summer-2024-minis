@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>your puzzle</title>
+    <script>
+      count = 0;
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function ruin() {
+        document.getElementById("body").innerHTML +=
+          "<p style='display:inline;color:red;top:0;width:100%;'> that was wrong, please try again. ";
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        document.getElementById("error").innerHTML +=
+          " that was wrong, please try again. ";
+        count++;
+
+        if (count === 3) {
+          alert("Please try a little harder.");
+        } else if (count === 4) {
+          alert("This shouldn't be that hard to understand.");
+        } else if (count === 5) {
+          alert("Why can't you get it right?");
+        } else if (count === 6) {
+          document.getElementById("header").innerHTML = "finish the puzzle.";
+          document.getElementById("header").style.fontSize = 50;
+        } else if (count === 7) {
+          alert("There must be something wrong with you.");
+          alert("Are you stupid or something?");
+        } else if (count === 8) {
+          document.getElementById("header").innerHTML = "finish it, dammnit.";
+          document.getElementById("header").style.color = "red";
+          document.getElementById("header").style.fontSize = 150;
+        } else if (count === 9) {
+          document.getElementById("header").innerHTML = "???!?!?!?";
+          document.getElementById("header").style.fontSize = 250;
+        } else if (count === 10) {
+          document.getElementById("body").innerHTML = "";
+          document.getElementById("body").style.padding = 0;
+          let speed = 1000;
+          for (var i = 0; i < 10; setInterval(ruin, speed)) {
+            i++;
+            speed -= 100;
+          }
+        }
+        document.getElementById("body").innerHTML += "</p>";
+      }
+    </script>
+    <style>
+      .shape {
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body style="padding: 50px; font-family: Arial; opacity: 1" id="body">
+    <h1 id="header">please attempt to complete the puzzle</h1>
+    <p id="error" style="color: red"></p>
+    <img
+      src="https://cdn.glitch.global/b62cce24-10cc-434e-a5f9-b4939f8d9a2d/hole.png?v=1720563906609"
+      class="shape"
+      id="hole"
+      style="margin: 5px"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+    />
+    <br style="margin: 30px" />
+    <div style="display: inline-flex; border: 3px black solid; padding: 5px">
+      <img
+        src="https://cdn.glitch.global/b62cce24-10cc-434e-a5f9-b4939f8d9a2d/triangle.png?v=1720564121088s"
+        class="shape"
+        draggable="true"
+        ondragstart="drag(event)"
+      />
+      <img
+        src="https://cdn.glitch.global/b62cce24-10cc-434e-a5f9-b4939f8d9a2d/square.png?v=1720564353559"
+        class="shape"
+        draggable="true"
+        ondragstart="drag(event)"
+      />
+      <img
+        src="https://cdn.glitch.global/b62cce24-10cc-434e-a5f9-b4939f8d9a2d/star.png?v=1720563741966"
+        class="shape"
+        draggable="true"
+        ondragstart="drag(event)"
+      />
+    </div>
+  </body>
+</html>

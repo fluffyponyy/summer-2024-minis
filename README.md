@@ -11,8 +11,8 @@ A set of mini web projects I made in the summer months of 2024.
 [Glitch link](https://easy-puzzle.glitch.me/)
 
 ## last-online
-**Premise**: <br>
+**Premise**: A narrative in the form of 3 chat dialogues (very creative, I know). <br>
 **Controls**: Mouse, Keyboard: Space, X, and Enter as instructed. <br>
-**Notes**:  <br>
+**Notes**: The code could have been made cleaner and shorter; it is pretty repetitive. <br>
 
 [Glitch link](https://red-screen.glitch.me/)
